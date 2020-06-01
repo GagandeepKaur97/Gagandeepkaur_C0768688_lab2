@@ -35,6 +35,16 @@
 		}
 		wipe();
 	 }
+	 function addColumn(){
+		 var tbl = document.getElementById('myTable'),i;
+
+		 for(i = 0; i<tbl.rows.length;i++){
+			 createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length),"cell");
+			}
+
+tbl.style.borderCollapse = "collapse";
+
+}
 	</script>
 	
 </html>
