@@ -12,7 +12,29 @@
 	<script language="javascript">
 		
 		//Your code goes here
-		function generateTable(){}
+		function generateTable(){
+			var tbl= document.createElement("TABLE");
+		 tbl.setAttribute("id","myTable");
+		 document.body.appendChild(tbl);
+		 var row = parseInt(document.getElementById('T1').value);
+		 var Column = parseInt(document.getElementById('T2').value);
+		 tbl.style.borderCollapse = "collapse";
+		 tbl.style.marginTop = "20px";
+		 tbl.style.marginLeft = "20px";
+
+
+		 for(var i = 0; i<row;i++){
+			 var rows = tbl.insertRow(i);
+
+			 for(var c=0; c<column; c++){
+				 y= rows.insertCell(c);
+
+				 y.innerHTML = "cell";
+				 y.style.border = "1px solid black";
+			 }
+		}
+		wipe();
+	 }
 	</script>
 	
 </html>
