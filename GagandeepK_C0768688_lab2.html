@@ -45,6 +45,37 @@
 tbl.style.borderCollapse = "collapse";
 
 }
+function addRow(){
+
+
+var tbl = document.getElementById('myTable'),
+row = tbl.insertRow(tbl.rows.length),
+i;
+
+for (i = 0; i < tbl.rows[0].cells.length; i++) {
+createCell(row.insertCell(i), "cell");
+}
+
+tbl.style.borderCollapse = "collapse";
+
+}
+function createCell(cell, text) {
+var div = document.createElement('div');
+var txt = document.createTextNode(text);
+div.appendChild(txt);
+cell.appendChild(div);
+cell.style.border = "1px solid black"
+}
+
+function wipe(){
+document.getElementById('t1').remove();
+document.getElementById('t2').remove();
+document.getElementById('b1').remove();
+
+document.body.innerHTML = document.body.innerHTML.replace("Number of rows:","")
+document.body.innerHTML = document.body.innerHTML.replace("Number of cols:","")
+
+}
 	</script>
 	
 </html>
